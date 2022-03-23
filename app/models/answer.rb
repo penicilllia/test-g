@@ -5,7 +5,7 @@ class Answer < ApplicationRecord
 
   scope :right, -> { where(correct: :true) }
 
-  validate :validate_answers_count, allow_nil: true
+  validate :validate_answers_count
 
   private
 
