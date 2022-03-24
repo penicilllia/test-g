@@ -1,64 +1,43 @@
 class QuestionsController < ApplicationController
-  
+  before_action :find_test, only: %i[index, create]
+
 	def index
-		begin
-			test = Test.find(params[:test_id])
-			questions = test.questions
-		rescue ActiveRecord::RecordNotFound
-			redirect_to root_path
-			return
-		end
+		#test = Test.find(params[:test_id])
+		questions = @test.questions
 		render plain: questions.inspect
 	end
 
 	def show
-		begin
-			test = Test.find(params[:test_id])
-			question = test.questions.find(params[:id])
-		rescue ActiveRecord::RecordNotFound
-			redirect_to root_path
-			return
-		end
+		question = Question.find(params[:id])
 		render plain: question.inspect
 	end
 
 	def new
-		begin
-			test = Test.find(params[:test_id])
-		rescue ActiveRecord::RecordNotFound
-			redirect_to root_path
-			return
-		end
-		@test_id = test.id
 		question = Question.new
 	end
 
 	def create
-		begin
-			test = Test.find(params[:test_id])
-		rescue ActiveRecord::RecordNotFound
-			redirect_to root_path
-			return
+		question = @test.questions.new(question_params)
+		if question.save
+			render plain: question.inspect
+		else
+			render plain: "Параметры вопроса не валидные"
 		end
-		question = test.questions.create(question_params)
-		render plain: question.inspect
 	end
 
 	def destroy
-		begin
-			test = Test.find(params[:test_id])
-		rescue ActiveRecord::RecordNotFound
-			redirect_to root_path
-			return
-		end
-		question = test.questions.find(params[:id])
+		question = Question.find(params[:id])
 		question.destroy
 	end
 
 	private
 
+	def find_test
+		@test = Test.find(params[:test_id])
+	end
+
 	def question_params
-		params.require(:question).permit(:body, :test_id)
+		params.require(:question).permit(:body)
 	end
 
 end
