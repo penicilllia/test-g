@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    @question = Question.new
+    @question = @test.questions.new
   end
 
   def create
@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to @question
     else
-      render plain: "Параметры вопроса не валидные"
+      render :new
     end
   end
 
@@ -37,11 +37,9 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
+    @test = @question.test
     @question.destroy
-  end
-
-  def delete
-    @question.destroy
+    redirect_to root_path
   end
 
   private
