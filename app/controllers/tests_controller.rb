@@ -1,37 +1,58 @@
 class TestsController < ApplicationController
 
-	rescue_from ActiveRecord::RecordNotFound, with: :test_not_found
+  rescue_from ActiveRecord::RecordNotFound, with: :test_not_found
 
-	def index
-		result = ["Class: #{params.class}", "Parametres: #{params.inspect}"]
-		render plain: result.join("\n")
-	end
+  before_action :find_test, only: %i[show edit update destroy]
 
-	def show
-		tests = Test.all
-		render plain: tests.inspect
-	end
+  def index
+    @tests = Test.all
+  end
 
-	def new
-	end
+  def show
+    @test = Test.find(params[:id])
+  end
 
-	def create
-		test = Test.create(test_params)
-		if test.save?
-			render plain: test.inspect
-		else
-			render plain: "Параметры теста не валидные"
-		end
-	end
+  def new
+    @test = Test.new
+  end
 
-	private
+  def create
+    @test = Test.new(test_params)
+    if @test.save
+      redirect_to @test
+    else
+      render :new
+    end
+  end
 
-	def test_not_found
-		render plain: "Test Not Found", status: 404
-	end
+  def edit
+  end
 
-	def test_params
-		params.require(:test).permit(:title, :level, :category_id)
-	end
+  def update
+    if @test.update(test_params)
+      redirect_to @test
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @test.destroy
+    redirect_to root_path
+  end
+
+  private
+
+  def test_not_found
+    render plain: "Test Not Found", status: 404
+  end
+
+  def find_test
+    @test = Test.find(params[:id])
+  end
+
+  def test_params
+    params.require(:test).permit(:title, :level, :category_id)
+  end
 
 end
