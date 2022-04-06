@@ -2,8 +2,8 @@ class Test < ApplicationRecord
   has_many :questions
   belongs_to :category
   
-  has_many :tests_users
-  has_many :users, through: :tests_users
+  has_many :test_passages
+  has_many :users, through: :test_passages
 
   validates :title, presence: true, uniqueness: { scope: :level }
 
