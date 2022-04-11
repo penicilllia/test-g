@@ -1,6 +1,6 @@
 <h1>The <%= @test_passage.test.title %> test was complited!</h1>
 
-<% if @result_percent >= 85 %>
+<% if @test_passage.success?(@result_percent) %>
   <h2>You complete the test! Yor result is <font color="green"><%= @result_percent %></font> %</h2>
 <% else %>
   <h2>You failed the test! Yor result is <font color="red"><%= @result_percent %></font> %</h2>
