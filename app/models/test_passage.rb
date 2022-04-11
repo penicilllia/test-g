@@ -23,8 +23,12 @@ class TestPassage < ApplicationRecord
     self.test.questions.index(current_question) + 1
   end
 
-  def success?(result)
-    result >= SUCCESS_PERCENT
+  def test_result
+    self.correct_questions.to_f / self.test.questions.count.to_f * 100.0
+  end
+
+  def success?
+    test_result >= SUCCESS_PERCENT
   end
 
   private
