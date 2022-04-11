@@ -15,6 +15,7 @@ class TestsController < ApplicationController
 
   def start
     @user.tests.push(@test)
+    session[:count] = 0
     redirect_to @user.test_passage(@test)
   end
 
