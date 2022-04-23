@@ -10,11 +10,22 @@
   </head>
 
   <body>
-    <%= yield %>
+  <p class="nav user"><%= link_to "Test Guru Project", root_path %></p>
+    <% if logged_in? %>
+      <p class="nav user">Wellcome, <b><%= current_user.name %></b> Guru</p>
+      <p class="nav user"><%= link_to "Logout", logout_path %></p>
+    <% else %>
+      <p class="nav user"><%= link_to "Login", login_path %></p>
+      <p class="nav user"><%= link_to "Signup", signup_path %></p>
+    <% end %>
+    
+      <%= yield %>
   </body>
   <p>
     <%= current_year %>
   </p>
+
+
   Автор проекта: Сытина А.Н.
   <br><p><%= github_url("penicilllia", "test-g") %></p>
   Проект предназначен для: 
