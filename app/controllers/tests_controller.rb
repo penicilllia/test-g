@@ -3,7 +3,6 @@ class TestsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :test_not_found
 
   before_action :find_test, only: %i[show edit update destroy start]
-  before_action :set_user, only: %i[ start ]
 
   def index
     @tests = Test.all
@@ -59,10 +58,6 @@ class TestsController < ApplicationController
 
   def test_params
     params.require(:test).permit(:title, :level, :category_id)
-  end
-
-  def set_user
-    @user = User.first
   end
 
 end
