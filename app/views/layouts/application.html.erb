@@ -11,15 +11,21 @@
 
   <body>
   <p class="nav user"><%= link_to "Test Guru Project", root_path %></p>
-    <% if logged_in? %>
-      <p class="nav user">Wellcome, <b><%= current_user.name %></b> Guru</p>
-      <p class="nav user"><%= link_to "Logout", logout_path %></p>
+    <% if user_signed_in? %>
+      <p class="nav user">
+        Wellcome, <b><%= current_user.name %></b> Guru<
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      </p>
     <% else %>
-      <p class="nav user"><%= link_to "Login", login_path %></p>
-      <p class="nav user"><%= link_to "Signup", signup_path %></p>
+      <p class="nav user">
+        <%= link_to "Login", new_user_session_path %>
+        <%= link_to "Signup", new_user_registration_path %>
+      </p>
     <% end %>
     
-      <%= yield %>
+    <%= render 'shared/flash' %>
+
+    <%= yield %>
   </body>
   <p>
     <%= current_year %>
