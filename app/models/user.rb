@@ -11,12 +11,16 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
 
   validates :name, presence: true
-  validates_format_of :email, with: URI::MailTo::EMAIL_REGEXP
   validates :email, presence: true,
-                    uniqueness: true
+                    uniqueness: true,
+                    format: { with: URI::MailTo::EMAIL_REGEXP } 
 
   def test_passage(test)
     self.test_passages.order(id: :desc).find_by(test_id: test.id)
+  end
+
+  def admin?
+    self.class == Admin
   end
 
 end
