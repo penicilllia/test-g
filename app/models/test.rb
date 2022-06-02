@@ -1,7 +1,7 @@
 class Test < ApplicationRecord
   has_many :questions
   belongs_to :category
-  belongs_to :admin
+  belongs_to :author, class_name: 'User'
   
   has_many :test_passages
   has_many :users, through: :test_passages

@@ -8,6 +8,7 @@ class User < ApplicationRecord
          :validatable
   
   has_many :test_passages
+  has_many :created_tests, class_name: 'Test'
   has_many :tests, through: :test_passages
 
   validates :name, presence: true
