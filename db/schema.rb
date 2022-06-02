@@ -58,9 +58,10 @@ ActiveRecord::Schema.define(version: 2022_06_02_113030) do
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "author"
+    t.integer "user_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["tests_id"], name: "index_tests_on_tests_id"
+    t.index ["user_id"], name: "index_tests_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,7 +80,6 @@ ActiveRecord::Schema.define(version: 2022_06_02_113030) do
     t.string "type", default: "User", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "created_tests"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
