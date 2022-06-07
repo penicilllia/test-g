@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :rememberable, 
          :validatable
   
-  has_many :tests
+  has_many :user_tests, class_name: 'Test'
   has_many :test_passages
   has_many :tests, through: :test_passages
 
