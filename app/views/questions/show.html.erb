@@ -1,12 +1,12 @@
 <p>
-  <strong>Question: </strong>
+  <strong><%= t('.question') %></strong>
   <%= @question.body %>
 </p>
 
-<h2>Answers</h2>
+<h2><%= t('.answers') %></h2>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<%= render 'Back', test_path(@question.test) %>
+<%= render t('.back'), test_path(@question.test) %>

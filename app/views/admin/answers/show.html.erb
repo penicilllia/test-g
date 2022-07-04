@@ -1,4 +1,4 @@
-<h2>Question</h2>
+<h2><%= t('.header') %></h2>
 
 <p>
   <%= @answer.question.body %>
@@ -15,5 +15,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_admin_answer_path(@answer) %> |
-<%= link_to 'Back', question_path(@answer.question) %>
+<%= link_to t('.edit'), edit_admin_answer_path(@answer) %> |
+<%= link_to t('.back'), question_path(@answer.question) %>

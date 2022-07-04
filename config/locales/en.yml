@@ -31,3 +31,151 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+  
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: "Tricky Tests"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Actions"
+  
+  users:
+    new:
+      registrtion: "Become a guru"
+
+  sessions:
+    new:
+      enter: "Enter the Guru Gates"
+
+  layouts:
+    admin:
+      header: "Admin Panel | TestGuru"
+    
+  test_passages:
+    result:
+      header: "The %{title} test was completed!"
+      success: "You complete the test! Yor result is "
+      fail: "You failed the test! Yor result is "
+      link: "Back to tests"
+    show:
+      title: "Pass the %{title} test"
+      question: "Question "
+  
+  answers:
+    show:
+      hedaer: "Question"
+      answer: "Answer:"
+      correct: "Correct:"
+      back: "Back"
+
+  questions:
+    index:
+      title: "Title: "
+      level: "Level: "
+    show:
+      question: "Question" 
+      answers: "Answers: "
+      back: "Back"
+
+  admin:
+    nav:
+      panel: "TestGuru Admin Panel"
+      wellcome: "Wellcome "
+      guru: " Guru"
+      logout: "Logout"
+    
+    tests:
+      create:
+        success: "Test was successfully created"
+      index:
+        header: "Tricky Tests"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+        create: "New test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      edit:
+        title: "Edit Test"
+        back: "Back"
+      new: 
+        title: "Create New Test"
+        back: "Back"
+      show: 
+        title: "Title: "
+        level: "Level: "
+        questions: "Questions"
+        back: "Back"
+        edit: "Edit"
+
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      edit:
+        title: "Editing Answer"
+        show: "Show"
+        back: "Back"
+      index:
+        header: "Answers"
+        show: "Show"
+        edit: "Edit"
+        destroy: "Delete"
+        confirm: "Are you sure?"
+        new: "New Answer"
+      new:
+        header: "New Answer"
+        back: "Back"
+      show:
+        header: "Question"
+        back: "Back"
+        edit: "Edit"
+    
+    questions:
+      question:
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?" 
+      index:
+        title: "Title: "
+        level: "Level: "
+        body: "Body"
+        actions: "Actions"
+      show:
+        question: "Question: "
+        answers: "Answers"
+        new: "New answer"
+        edit: "Edit"
+        back: "Back"
+
+
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
+      

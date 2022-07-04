@@ -1,17 +1,17 @@
 <p>
-  <strong>Title: </strong>
+  <strong><%= t('.title') %></strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level: </strong>
+  <strong><%= t('.level') %></strong>
   <%= @test.level %>
 </p>
 
 <table>
   <tr>
-    <th>Body</th>
-    <th colspan="2">Actions</th>
+    <th><%= t('.body') %></th>
+    <th colspan="2"><%= t('.actions') %></th>
   </tr>
 
   <%= render @questions %>

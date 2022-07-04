@@ -12,8 +12,8 @@ admin1 = Admin.create({ name: "Admin", email: "admin_email@test.guru", password:
 category1 = Category.create({ title: 'Python' })
 category2 = Category.create({ title: "Ruby on Rails" })
 
-test1 = Test.create({ title: "Basic python", level: 1, category_id: category1.id, user_id: admin1.id })
-test2 = Test.create({ title: "Basic ruby and rails", level: 1, category_id: category2.id, user_id: admin1.id }) 
+test1 = Test.create({ title: "Базовый python", level: 1, category_id: category1.id, user_id: admin1.id })
+test2 = Test.create({ title: "Базовый Ruby on rails", level: 1, category_id: category2.id, user_id: admin1.id }) 
 
 question1 = Question.create({ body: "Под влиянием какого языка был создан Ruby?", test_id: test2.id })
 question2 = Question.create({ body: "Как называется самый популярный фреймворк на Ruby?", test_id: test2.id })
