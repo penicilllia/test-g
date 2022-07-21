@@ -1,15 +1,12 @@
 <p>
-  <strong>Question: </strong>
+  <strong><%= t('.question') %></strong>
   <%= @question.body %>
 </p>
 
-<h2>Answers</h2>
-
-<%= link_to 'New answer', new_question_answer_path(@question) %>
+<h2><%= t('.answers') %></h2>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<%= link_to 'Edit', edit_question_path(@question) %> | 
-<%= link_to 'Back', root_path %>
+<%= render t('.back'), test_path(@question.test) %>

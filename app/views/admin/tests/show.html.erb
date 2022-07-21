@@ -1,0 +1,22 @@
+<p>
+  <strong><%= t('.title') %></strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <strong><%= t('.level') %></strong>
+  <%= @test.level %>
+</p>
+
+<strong><%= t('.questions') %></strong>
+
+<ol>
+  <%= render partial: 'questions/question', collection: @test.questions %>
+</ol>
+
+<p>
+  <%= link_to t('.add'), new_admin_test_question_path(@test) %>
+</p>
+
+<%= link_to t('.edit'), edit_admin_test_path(@test) %> | 
+<%= link_to t('.back'), admin_tests_path %>

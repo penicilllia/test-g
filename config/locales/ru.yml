@@ -1,0 +1,159 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровнь"
+        category_id: "Категория"
+    
+  shared:
+    errors:
+      header:
+        one: "%{count} ошибка обнаружена"
+        other: "%{count} ошибки обнаружено"
+        few: "%{count} ошибки обнаружено"
+        many: "%{count} ошибок обнаружено"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действия"
+  
+  users:
+    new:
+      registrtion: "Стать гуру"
+
+  sessions:
+    new:
+      enter: "Войти во Врата Гуру"
+
+  layouts:
+    admin:
+      header: "Панель Администратора | ТестГуру"
+
+  test_passages:
+    result:
+      header: "Тест %{title} завершен!"
+      success: "Вы прошли тест! Ваш результат "
+      fail: "Вы провалили тест! Ваш результат "
+      link: "К списку тестов"
+    show:
+      title: "Прохождение теста по теме %{header}"
+      question: "Вопрос "
+
+  answers:
+    show:
+      hedaer: "Вопрос"
+      answer: "Ответ:"
+      correct: "Правильный ответ:"
+      back: "Назад"
+
+  questions:
+    index:
+      title: "Название: "
+      level: "Уровень: "
+    show:
+      question: "Вопрос" 
+      answers: "Ответы: "
+      back: "Назад"
+
+  admin:
+    nav:
+      panel: "TestGuru Панель Администратора"
+      wellcome: "Добро пожаловать, "
+      guru: " Гуру"
+      logout: "Выход"
+
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+        create: "Новый тест"
+      test:
+        show: "Посмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      edit:
+        title: "Редактировать тест"
+        back: "Назад"
+        question: "Редактирование вопросов"
+      new:
+        title: "Создать новый тест"
+        back: "Назад"
+      show: 
+        title: "Название: "
+        level: "Уровень: "
+        questions: "Вопросы"
+        back: "Назад"
+        edit: "Редактировать"
+        add: "Добавить вопрос"
+    
+    answers:
+      answer:
+        show: "Посмотреть"
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      edit:
+        title: "Редактирование вопроса"
+        show: "Посмотреть"
+        back: "Назад"
+      index:
+        header: "Ответы"
+        show: "Посмотреть"
+        edit: "Редактировать"
+        destroy: "Удалить"
+        confirm: "Вы уверены?"
+        new: "Новый ответ"
+        back: "Назад"
+      new:
+        header: "Новый ответ"
+        back: "Назад"
+      show:
+        header: "Вопрос"
+        back: "Назад"
+        edit: "Редактировать"
+    
+    questions:
+      question:
+        edit: "Редактировать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      index:
+        title: "Название: "
+        level: "Уровень: "
+        body: "Тело вопроса"
+        actions: "Действия"
+      show:
+        question: "Вопрос: "
+        answers: "Ответы"
+        new: "Новый ответ"
+        edit: "Редактировать"
+        back: "Назад"
+      form:
+        back: "К списку тестов"
+      edit:
+        editanswer: "Редактирование ответов"
+        back: "Назад"
+      new:
+        back: "Назад"
+
+  
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест на платформе TestGuru!"

@@ -1,0 +1,18 @@
+<p>
+  <strong><%= t('.title') %></strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <strong><%= t('.level') %></strong>
+  <%= @test.level %>
+</p>
+
+<table>
+  <tr>
+    <th><%= t('.body') %></th>
+    <th colspan="2"><%= t('.actions') %></th>
+  </tr>
+
+  <%= render @questions %>
+</table>
