@@ -1,3 +1,4 @@
 <%= render 'form' %>
 
-<%= render 'Back', admin_test_path(@question.test) %>
+<%= link_to t('.editanswer'), admin_question_answers_path(@question) %><br>
+<%= link_to t('.back'), admin_tests_path %>

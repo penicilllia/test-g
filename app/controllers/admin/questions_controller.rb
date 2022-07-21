@@ -1,6 +1,6 @@
 class Admin::QuestionsController < Admin::BaseController
 
-  rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
+  # rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
 
   before_action :find_test, only: %i[create new index ]
   before_action :find_question, only: %i[show update edit destroy]
@@ -19,7 +19,7 @@ class Admin::QuestionsController < Admin::BaseController
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      redirect_to @question
+      redirect_to admin_test_questions_path(@test)
     else
       render :new
     end
@@ -30,7 +30,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def update
     if @question.update(question_params)
-      redirect_to @question
+      redirect_to admin_question_path(@question)
     else
       render :edit
     end
@@ -39,7 +39,7 @@ class Admin::QuestionsController < Admin::BaseController
   def destroy
     @test = @question.test
     @question.destroy
-    redirect_to admin_test_path
+    redirect_to admin_test_questions_path(@test)
   end
 
   private

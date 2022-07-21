@@ -6,4 +6,4 @@
 
 <%= render 'form', answer: @answer %>
 
-<%= link_to t('.back'), admin_answers_path %>
+<%= link_to t('.back'), admin_question_answers_path(@question, @answer) %>

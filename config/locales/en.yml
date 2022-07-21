@@ -120,6 +120,7 @@ en:
       edit:
         title: "Edit Test"
         back: "Back"
+        question: "Edit questions"
       new: 
         title: "Create New Test"
         back: "Back"
@@ -129,6 +130,7 @@ en:
         questions: "Questions"
         back: "Back"
         edit: "Edit"
+        add: "Add question"
 
     answers:
       answer:
@@ -147,6 +149,7 @@ en:
         destroy: "Delete"
         confirm: "Are you sure?"
         new: "New Answer"
+        back: "Back"
       new:
         header: "New Answer"
         back: "Back"
@@ -170,6 +173,13 @@ en:
         answers: "Answers"
         new: "New answer"
         edit: "Edit"
+        back: "Back"
+      form:
+        back: 'Back to tests'
+      edit:
+        editanswer: "Edit answers"
+        back: "Back"
+      new:
         back: "Back"
 
 

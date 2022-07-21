@@ -9,17 +9,10 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @answers.each do |answer| %>
-      <tr>
-        <td><%= link_to t('.show'), answer %></td>
-        <td><%= link_to t('.edit'), edit_admin_answer_path(answer) %></td>
-        <td><%= link_to t('.destroy'), answer, method: :delete, data: { confirm: t('.confirm') } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <%= render @answers %>
 </table>
 
 <br>
 
-<%= link_to t('.new'), new_admin_answer_path %>
+<%= link_to t('.new'), new_admin_question_answer_path(@question) %><br>
+<%= link_to t('.back'), edit_admin_question_path(@question) %>
