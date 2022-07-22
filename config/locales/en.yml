@@ -101,6 +101,7 @@ en:
       wellcome: "Wellcome "
       guru: " Guru"
       logout: "Logout"
+      title: "TestGuru Project"
     
     tests:
       create:

@@ -68,10 +68,11 @@ ru:
 
   admin:
     nav:
-      panel: "TestGuru Панель Администратора"
+      panel: "TestGuru | Панель Администратора"
       wellcome: "Добро пожаловать, "
       guru: " Гуру"
       logout: "Выход"
+      title: "Проект ТестГуру"
 
     tests:
       create:
