@@ -49,6 +49,9 @@ ru:
     show:
       title: "Прохождение теста по теме %{header}"
       question: "Вопрос "
+    gist:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения gist произошла ошибка"
 
   answers:
     show:
