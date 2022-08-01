@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light">
+<%= link_to "Проект ТестГуру", root_path, class: 'navbar-brand' %>
+
+  <span class="navbar-text">
+    <% if user_signed_in? %>
+      Здравствуй, <b><%= current_user.name %></b> Гуру | 
+      <%= link_to "Выход", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Войти в аккаунт", new_user_session_path %>
+      <%= link_to "Регистрация", new_user_registration_path %>
+    <% end %>
+  </span>
+</nav>

@@ -4,42 +4,34 @@
     <title>TestG</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <p class="nav user"><%= link_to "Test Guru Project", root_path %></p>
-    <% if user_signed_in? %>
-      <p class="nav user">
-        Wellcome, <b><%= current_user.name %></b> Guru | 
-        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      </p>
-    <% else %>
-      <p class="nav user">
-        <%= link_to "Login", new_user_session_path %>
-        <%= link_to "Signup", new_user_registration_path %>
-      </p>
-    <% end %>
-    
-    <%= render 'shared/flash' %>
+  <%= render 'shared/nav' %>
 
-    <%= yield %>
+    <div class="container">
+      <%= render 'shared/flash' %>
+      <%= yield %>
+    </div>
   </body>
-  <p>
-    <%= current_year %>
-  </p>
 
-  Project author: Sytina A.N.
-  <br><p><%= github_url("penicillia", "test-g") %></p>
-  The project is intended for:
-  <br>
-  <br>- Creation and management of tests;
-  <br>- Authentication (distinguishing between who passes what test and who
-  <br> which test creates);
-  <br>- Creation of tests by admins;
-  <br>- Execution of tests by users;
-  <br>- Publication of results in social networks.
-  <br><p><a href="http://thinknetica.com">Thinknetica Online School Learning Project</a></p>
+  <footer class="text-center text-lg-start bg-light text-muted">
+    Project author: Sytina A.N.
+    <br><p><%= github_url("penicillia", "test-g") %></p>
+    The project is intended for:
+    <br>
+    <br>- Creation and management of tests;
+    <br>- Authentication (distinguishing between who passes
+    <br> what test and who which test creates);
+    <br>- Creation of tests by admins;
+    <br>- Execution of tests by users;
+    <br>- Publication of results in social networks.
+    <br><p><a href="http://thinknetica.com">Thinknetica Online School Learning Project</a></p>
+    <p><%= current_year %></p>
+  </footer>
 </html>
