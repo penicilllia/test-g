@@ -1,16 +1,21 @@
-<h1><%= t('.header') %></h1>
+<div class="row justify-content-center p-3">
+  <div class="container">
+    <h1><%= t('.header') %></h1> 
+    <div class="table">
+      <table>
+        <tr>
+          <th class="col-md-3"><%= t('.title') %></th>
+          <th class="col-md-3"><%= t('.level') %></th>
+          <th class="col-md-3"><%= t('.questions') %></th>
+          <th class="col-md-3"><%= t('.actions') %></th>
+        </tr>
 
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.questions') %></th>
-    <th colspan="3"><%= t('.actions') %></th>
-  </tr>
+        <%= render @tests %>
+      </table>
+    </div>
 
-  <%= render @tests %>
-</table>
-
-<p>
-  <%= link_to t('.create'), new_admin_test_path %>
-</p>
+    <p>
+      <%= link_to t('.create'), new_admin_test_path %>
+    </p>
+  </div>
+</div>
