@@ -14,6 +14,11 @@ class GistQuestionService
     @client
   end
 
+  def success?
+    puts "11111112222222333333344444455555556666666677777778888888999999900000000"
+    @client.last_response
+  end
+
   private
 
   def gist_params
