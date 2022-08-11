@@ -15,8 +15,7 @@ class GistQuestionService
   end
 
   def success?
-    puts "11111112222222333333344444455555556666666677777778888888999999900000000"
-    @client.last_response
+    @client.last_response.in?(200..299)
   end
 
   private
