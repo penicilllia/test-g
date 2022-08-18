@@ -195,5 +195,11 @@ en:
   gist_question_service:
     gist_params:
       description: "A question about %{title} from TestGuru"
+  
+  devise:
+     registrations:
+       new:
+         match: 'Match'
+         mismatch: 'Mismatch'
 
       

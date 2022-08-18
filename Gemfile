@@ -49,6 +49,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0'
+gem 'octicons_helper'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
