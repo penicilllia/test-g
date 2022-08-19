@@ -165,3 +165,10 @@ ru:
   gist_question_service:
     gist_params:
       description: "Вопрос о %{title} из TestGuru"
+    
+  devise:
+     registrations:
+       new:
+         match: 'Совпадает'
+         mismatch: 'Не совпадает'
+         

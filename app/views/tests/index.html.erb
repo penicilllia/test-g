@@ -5,7 +5,11 @@
     <div class="table">
       <table>
         <tr>
-          <th class="col-md-3"><%= t('.title') %></th>
+          <th class="sort-by-title pointer">
+            <%= t('.title') %>
+            <%= octicon 'arrow-up', class: 'text-success hide' %>
+            <%= octicon 'arrow-down', class: 'text-success hide' %>
+          </th>
           <th class="col-md-3"><%= t('.level') %></th>
           <th class="col-md-3"><%= t('.questions') %></th>
           <th class="col-md-3"><%= t('.actions') %></th>
