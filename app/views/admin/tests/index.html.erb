@@ -1,6 +1,7 @@
 <div class="row justify-content-center p-3">
   <div class="container">
-    <h1><%= t('.header') %></h1> 
+    <h1><%= t('.header') %></h1>
+    <%= render 'shared/errors', resource: @test %>
     <div class="table">
       <table>
         <tr>

@@ -1,5 +1,8 @@
 <h1><%= t('.title', header: @test_passage.test.title) %></h1>
 
+<div class="progress-bar mb-3" style="background-color: green; height: 20px; width: 
+<%= @test_passage.question_number * 100 / @test_passage.test.questions.count %>%;"></div>
+
 <h2><%= t('.question') %><%= @test_passage.question_number %> / <%= @test_passage.test.questions.count %></h2>
 
 <b>
