@@ -1,4 +1,5 @@
 document.addEventListener('turbolinks:load', function() {
+   if (window.location.href.includes("sign_up")) {
     var greenAlert = document.querySelector('.alert-green')
     var redAlert = document.querySelector('.alert-red')
 
@@ -24,6 +25,7 @@ document.addEventListener('turbolinks:load', function() {
         redAlert.classList.remove('hide')
       }
     }
+  }
   
 })
   

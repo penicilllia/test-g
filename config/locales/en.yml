@@ -135,6 +135,8 @@ en:
         back: "Back"
         edit: "Edit"
         add: "Add question"
+      form_inline:
+        submit: "Ok"
 
     answers:
       answer:
